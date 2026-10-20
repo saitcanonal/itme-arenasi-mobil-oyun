@@ -1,0 +1,14 @@
+{
+  "protocolVersion": 1,
+  "matchId": "example-match-not-a-real-room",
+  "sequence": 1,
+  "tick": 0,
+  "horizontal": 0,
+  "vertical": 0,
+  "jumpPressed": false,
+  "pushPressed": false,
+  "gripPressed": false,
+  "gripReleased": false,
+  "crouchHeld": false,
+  "ultimatePressed": false
+}

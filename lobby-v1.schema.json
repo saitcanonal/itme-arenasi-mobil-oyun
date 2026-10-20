@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "P26 authenticated lobby/input commands with server-driven reconnect",
+  "description": "Authenticated /ws/v1/lobby. Client inputs only; extra fields rejected.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocolVersion",
+    "sequence",
+    "type"
+  ],
+  "properties": {
+    "protocolVersion": {
+      "const": 1
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "type": {
+      "enum": [
+        "create",
+        "join",
+        "leave",
+        "map",
+        "team",
+        "consent",
+        "start",
+        "ping",
+        "input"
+      ]
+    },
+    "code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{5}$"
+    },
+    "capacity": {
+      "type": "integer",
+      "enum": [
+        0,
+        2,
+        4
+      ]
+    },
+    "mapId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "targetId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "team": {
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "consent": {
+      "type": "boolean"
+    },
+    "matchId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inputSequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "clientTick": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "horizontal": {
+      "type": "number",
+      "minimum": -1,
+      "maximum": 1
+    },
+    "jump": {
+      "type": "boolean"
+    },
+    "crouch": {
+      "type": "boolean"
+    },
+    "vertical": {
+      "type": "number",
+      "minimum": -1,
+      "maximum": 1
+    },
+    "push": {
+      "type": "boolean"
+    },
+    "gripPressed": {
+      "type": "boolean"
+    },
+    "gripReleased": {
+      "type": "boolean"
+    },
+    "ultimate": {
+      "type": "boolean"
+    }
+  }
+}

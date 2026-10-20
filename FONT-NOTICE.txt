@@ -1,0 +1,4 @@
+Lilita One: Copyright (c) 2011 Juan Montoreano. SIL OFL 1.1.
+Original: LilitaOne-original.ttf. Runtime derivative family: Arena Lilita TR.
+Derivative adds Turkish dotted I, S cedilla, G breve glyphs; base letter design preserved.
+License: ../../UnityProject/Assets/ItmeArena/Resources/UI/LilitaOne-OFL.txt

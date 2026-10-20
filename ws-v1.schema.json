@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reserved V1 envelope; no P21 WebSocket endpoint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocolVersion",
+    "type",
+    "matchId",
+    "sequence",
+    "tick",
+    "payloadJson"
+  ],
+  "properties": {
+    "protocolVersion": {
+      "const": 1
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "matchId": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tick": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "payloadJson": {
+      "type": "string",
+      "maxLength": 8192
+    }
+  }
+}
